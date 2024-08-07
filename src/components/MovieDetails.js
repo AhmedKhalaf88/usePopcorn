@@ -23,7 +23,7 @@ export default function MovieDetails({
   );
 
   const isWatched = watched?.map((movie) => movie.imdbID).includes(selectedId);
-  const watchedUserRating = watched.find(
+  const watchedUserRating = watched?.find(
     (movie) => movie.imdbID === selectedId
   )?.userRating;
 
