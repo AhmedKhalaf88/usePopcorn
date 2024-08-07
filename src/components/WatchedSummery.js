@@ -1,5 +1,5 @@
 const average = (arr) =>
-  arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+  arr?.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 export default function WatchedSummery({ watched }) {
   const avgImdbRating = average(watched?.map((movie) => movie.imdbRating));
