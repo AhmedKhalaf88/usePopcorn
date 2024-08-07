@@ -35,7 +35,9 @@ export default function App() {
   }
 
   function handleAddWatched(movie) {
-    setWatched((watched) => [...watched, movie]);
+    setWatched((watched) =>
+      Array.isArray(watched) ? [...watched, movie] : [movie]
+    );
   }
 
   function handleDeleteWatched(id) {
